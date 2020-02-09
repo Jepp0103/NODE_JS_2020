@@ -1,6 +1,7 @@
 // --------------------------------------
 // Exercise 3 - Add numbers from string to float
-
+console.log("------------------------------------------------")
+console.log("Exercise 3:")
 var numberOne = "1.10";
 var numberTwo = "2.30";
 
@@ -14,7 +15,8 @@ console.log(result);
 
 // --------------------------------------
 // Exercise 4 - Add the numbers and the total with 2 decimals
-
+console.log("------------------------------------------------")
+console.log("Exercise 4:")
 var numberOne = "1.10";
 var numberTwo = "2.30";
 
@@ -26,7 +28,8 @@ console.log(result);
 
 // --------------------------------------
 // Exercise 5 - Decimals and average
-
+console.log("------------------------------------------------")
+console.log("Exercise 5:")
 var one = 10;
 var two = 45;
 var three = 98;
@@ -40,7 +43,8 @@ console.log(average);
 
 // --------------------------------------
 // Exercise 6 - Get the character by index
-
+console.log("------------------------------------------------")
+console.log("Exercise 6:")
 var letters = "abc"
 // Get me the character "c"
 console.log("Letters: " + letters.charAt(2));
@@ -49,7 +53,8 @@ console.log("Array index: " + letters[2]);
 
 // --------------------------------------
 // Exercise 7 - Replace
-
+console.log("------------------------------------------------")
+console.log("Exercise 7:")
 var fact = "You are learning javascript!";
 
 // capitalize the J in Javascript
