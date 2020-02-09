@@ -2,7 +2,8 @@
 // Variables, strings, numbers, floats
 // --------------------------------------
 // Exercise 1 - Console and variables
-
+console.log("------------------------------------------------")
+console.log("Exercise 1:")
 var firstName = "Anders";
 var lastName = "Latif";
 // EXERCISE
@@ -13,6 +14,8 @@ console.log("My first name is", firstName, "and my last name is", lastName)
 
 // --------------------------------------
 // Exercise 2 - Numbers and Strings
+console.log("------------------------------------------------")
+console.log("Exercise 2:")
 var year = "2019";
 var number = 1;
 // Add the year plus the number
