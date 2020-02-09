@@ -21,7 +21,7 @@ var Jeppe = {name: "Jeppe", age: 24};
 var Martin = {name: "Martin", age: 25};
 var Alex = {name: "Alex", age: 26};
 
-friends.push("Jeppe", Martin, Alex);
+friends.push(Jeppe, Martin, Alex);
 console.log(friends);
 
 // --------------------------------------
