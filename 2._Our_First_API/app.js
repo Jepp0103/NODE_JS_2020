@@ -27,28 +27,31 @@ app.get("/time", (req, res) => {
     });
 });
 
-var users = [
-            { 
-                "id": 1, 
-                "name": "Jeppe"
-            },           
-            {
-                "id": 2,
-                "name": "Anders"
-            },
-            {
-                "id": 3,
-                "name": "Philip"
-            }
-            ]
+// var users = [
+//             { 
+//                 "id": 1, 
+//                 "name": "Jeppe"
+//             },           
+//             {
+//                 "id": 2,
+//                 "name": "Anders"
+//             },
+//             {
+//                 "id": 3,
+//                 "name": "Philip"
+//             }
+//             ]
+
+    var users = ["Jeppe", "Anders", "Philip"];
 
 
 //create a get route on /users
 app.get("/users/:id", (req, res) => {
     console.log(req.params);
-    userById = users.find(user => user.id === 1);
-    console.log(userById);
-    res.send(userById);
+    //userById = users.find(user => user.id === req.params.id);
+    //console.log(userById);
+    console.log(req.params.id)
+    res.send(users[req.params.id]);
 });
 
 
@@ -76,11 +79,17 @@ app.get("/google", (req, res) => {
   });
 });
 
-//html file
+//html files
 app.get("/documentationone", (req, res) => {
     console.log(__dirname)
+    // return res.redirect("documentationwto"); //redirecting to another page
     return res.sendFile(__dirname + '/public/documentationone.html');
 });
+
+app.get("/documentationtwo", (req, res) => {
+    return res.sendFile(__dirname + '/public/documentationTwo.html')
+});
+
 
 //listens for a port number
 app.listen(3000, error => {
