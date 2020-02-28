@@ -17,8 +17,6 @@ function addition(a, b) {
 
 console.log(addition(2, 6)); //prints 8
 
-
-
 function introduce() {
     console.log("Nice to meet you");
 }

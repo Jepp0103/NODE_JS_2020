@@ -79,12 +79,12 @@ var letters = ["a","b","c", "d", "e", "f", "g", "h"];
 // log every second char in the array starting from b
 for (i = 0; i < letters.length; i++) {
     if (i % 2 == 0)
-        console.log("Modulo way:", letters[i + 1]);
+        console.log(letters[i + 1]);
 }
 
 /*for (i = 1; i < letters.length; i+2) {
     console.log("+2 way:", letters[i + 1]);
-} - INFINITE AT THE MOMENT/
+} - INFINITE AT THE MOMENT/*/
 
 
 // --------------------------------------

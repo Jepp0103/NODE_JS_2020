@@ -22,8 +22,8 @@ console.log(person);
 
 // --------------------------------------
 // Exercise 3 - Add a property 
-console.log("------------------------------------------------")
-console.log("Exercise 3:")
+console.log("------------------------------------------------");
+console.log("Exercise 3:");
 var stackOverflow = {isAllowed: true};
 console.log(stackOverflow);
 
@@ -31,13 +31,19 @@ console.log(stackOverflow);
 
 // --------------------------------------
 // Exercise 4 - Remove a property 
-console.log("------------------------------------------------")
-console.log("Exercise 4:")
-var thisSong = {"description": "The best song in the world."}
+console.log("------------------------------------------------");
+console.log("Exercise 4:");
 
-// remove the property "description" and add a property called "about" that should say "Just a tribute." 
+var thisSong = {"description": "The best song in the world.", "artist": "Michael Jackson", "song": "Billie Jean"};
+
+//Remove the property "description"
 delete thisSong.description;
-thisSong = {"about": "Just a tribute"};
-console.log(thisSong.about);
+
+console.log("Only artist:", thisSong.artist);
+console.log("All information:", thisSong)
+
+//Overwriting the object with a property called "about".
+thisSong = {"about": "Michael Jackson doesn't live any longer"};
+console.log("Overwrited object", thisSong);
 
 // --------------------------------------
