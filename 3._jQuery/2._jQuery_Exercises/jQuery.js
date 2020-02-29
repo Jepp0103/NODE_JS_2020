@@ -54,25 +54,30 @@ $(".used-box").click(() => {
 });
 
 //16
-$("#submit-button").mouseover(() => {
+$("#submit-button").mouseover(() => { //takes a call back function
     $("#submit-button").text("You're ready to click");
 });
 
 $("#submit-button").mouseleave(() => {
     $("#submit-button").text("Click");
 });
+ 
 
 //17
 $("#submit-button").click(() => {
-    $("#first-list").append("<li>reason</li>");
+    let listNumber = $("#first-list li").length + 1;
+    $("#first-list").append("<li> Reason " + listNumber + "</li>");
 });
+
+//Other not at good solution
+// $("#submit-button").click(() => {
+//     $("#first-list").append("<li>reason</li>");
+// });
 
 //18
 $("div button").click(() => {
     console.log($("button").parent());
 });
-
-
 
 // $(document).ready(() => {
 //     $(".used-box").click(() => {
