@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const request = require("request");
 
 // parse application/x-www-form-urlencoded
 app.use(express.urlencoded({ extended: false }));
@@ -11,23 +10,39 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(express.static('videos'));
 
+const fs = require("fs");
 
-//Listens for a port number
-console.log(process.env.PORT);
-const port = process.env.PORT ? process.env.PORT : 3000
+const navbarPage = fs.readFileSync("./public/navbar/navbar.html", "utf8");
+const footerPage = fs.readFileSync("./public/footer/footer.html", "utf8");
+
+const frontpagePage = fs.readFileSync("./public/frontpage/frontpage.html", "utf8");
+const playerPage = fs.readFileSync("./public/player/player.html", "utf8");
+const uploadPage = fs.readFileSync("./public/upload/upload.html", "utf8");
 
 
-app.get("/frontpage", (req, res) => {
-    return res.sendFile(__dirname + '/public/frontpage.html')
+app.get("/", (req, res) => {
+    return res.send(navbarPage + frontpagePage + footerPage);
 });
 
 app.get("/player/:videoId", (req, res) => {
-    return res.sendFile(__dirname + "/public/player/player.html");
+    return res.send(navbarPage + playerPage + footerPage);
 });
 
-const server = app.listen(port, (error) => { //callback function
+app.get("/upload", (req, res) => {
+    return res.send(navbarPage + uploadPage + footerPage);
+});
+
+// Import routes
+const videosRoute = require("./routes/videos");
+
+// Set up routes with our server
+app.use(videosRoute);
+
+const port = process.env.PORT ? process.env.PORT : 3000;
+
+const server = app.listen(port, (error) => {
     if (error) {
-        console.log("Server could not run", error);
+        console.log("Error starting the server");
     }
-    console.log("Server is running on port", server.address().port);
+    console.log("This server is running on port", server.address().port);
 });
