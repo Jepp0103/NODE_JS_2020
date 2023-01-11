@@ -11,7 +11,7 @@
   "author": "Jeppe",
   "license": "ISC",
   "dependencies": {
-    "knex": "^0.21.0",
+    "knex": "^2.4.0",
     "migrate": "^1.6.2",
     "migrations": "^0.1.7",
     "mysql": "^2.18.1",
